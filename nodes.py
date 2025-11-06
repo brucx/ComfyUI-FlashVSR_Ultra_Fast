@@ -323,7 +323,7 @@ def flashvsr(pipe, frames, scale, color_fix, tiled_vae, tiled_dit, tile_size, ti
     log("[FlashVSR] Done.", message_type='info')
     if frames.shape[0] == 1:
         final_output = final_output.to(_device)
-        stacked_image_tensor = torch.median(final_output, dim=0).values.unsqueeze(0).to('cpu')
+        stacked_image_tensor = torch.median(final_output, dim=0).values.unsqueeze(0).float().to('cpu')
         del final_output
         clean_vram()
         return stacked_image_tensor
