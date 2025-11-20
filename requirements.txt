@@ -1,10 +1,15 @@
 torch
 torchvision
 numpy
+gradio
 einops
 safetensors
 tqdm
 pillow
 huggingface_hub
+imageio
+imageio-ffmpeg
+ffmpeg-python
+litserve
 triton; platform_system!="Windows"
 triton-windows; platform_system=="Windows"
