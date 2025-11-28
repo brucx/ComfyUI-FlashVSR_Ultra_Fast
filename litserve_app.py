@@ -6,7 +6,7 @@ from typing import Any, Dict, Generator
 
 import litserve as ls
 
-from webui import run_flashvsr_integrated
+from flashvsr_runner import run_flashvsr_integrated
 
 
 class FlashVSRLitAPI(ls.LitAPI):
